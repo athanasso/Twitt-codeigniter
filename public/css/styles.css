@@ -1,0 +1,207 @@
+/*General*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main {
+    flex-grow: 1;
+    background: url('../images/login-background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+input[type=text], input[type=password], input[type=email] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.primary-button {
+    color: white;
+    background-color: #006D77;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.secondary-button {
+    background-color: #8f001a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Header*/
+header {
+    background-color: black;
+    padding:15px;
+    text-align: center;
+    min-height: 40px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header .logo {
+    font-size: 24px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    position: absolute;
+    left: calc(50% - 35px);
+}
+.header-actions {
+    float: right;
+    margin-top: 8px;
+}
+.header-actions .fa-solid {
+    color: white;
+    margin-right: 20px;
+    font-size: 20px;
+}
+/*Login and register page*/
+.login-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.login-box{
+    border: 1px solid grey;
+    width: 400px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.login-box h1 {
+    text-align: left;
+}
+.login-box a {
+    font-weight: bold;
+    color: black;
+}
+.register-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.register-box{
+    border: 1px solid grey;
+    width: 400px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.login-button {
+    margin: auto;
+    display: block;
+}
+/* Home page*/
+.home-main {
+    display: flex;
+    justify-content: center;
+}
+.timeline-container {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+.twitts-feed {
+    flex-grow: 4;
+    border-right: 1px solid lightgrey;
+}
+.recent-users-feed {
+    flex-grow: 1;
+    padding: 20px;
+}   
+
+/* Twitts*/
+.twitt {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+.twitt:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.twitt .profile-pic {
+    font-size: 50px;
+    margin-right: 20px;
+}
+.twitt p {
+    margin-top: 0;
+    font-size: 18px;
+}
+.twitt .metadata {
+    font-size: 14px;
+    color: grey;
+}
+
+/* new users*/
+.new-user {
+    display: flex;
+    align-items: center;
+}
+.new-user .profile-pic {
+    font-size: 30px;
+    margin-right: 20px;
+}
+.new-user p {
+    margin: 0,0,20,0;
+}
+
+/* Post page*/
+.post-container {
+    width: 100%;
+    max-width: 500px;
+}
+.post-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-container textarea {
+    width: 100%;
+    height: 120px;
+}
+/* profile page*/
+.profile-view {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-view .primary-button {
+    display: block;
+    margin-bottom: 20px;
+}
+.profile-main .user-profile-pic {
+    font-size: 200px;
+    color: white;
+    margin: 30px 0;
+}
+.profile-main .twitts-feed{
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    min-width: 500px;
+}

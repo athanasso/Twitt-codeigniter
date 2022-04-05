@@ -3,8 +3,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d061b336ad.js" crossorigin="anonymous"></script>
         <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>/css/styles.css">     
-    </head>
+</head>
     <body>
         <header>
             <div class="logo">Twitt</div>
@@ -18,18 +19,15 @@
                 <a href="#" class="secondary-button">Logout</a>
             </div>
         </header>
-        <main>
-            <div class="login-box-container">
-              <div class="login-box">
-                  <h1>Login</h1>
-                  <form action="home.html">
-                     <input type="text" placeholder="username">
-                     <input type="text" placeholder="password">
-                     <button type="submit" class="primary-button login-button">Login</button>
-                   </form>
-                   <a href="register.html">Register Now</a>
-                </div>
-            </div>
+        <main class="post-main">
+           <div class="post-container">
+               <form>
+                   <textarea name="message" placeholder="Enter your post..."></textarea>
+                   <div class="form-actions">
+                    <button type="submit" class="primary-button">Post</button>
+                   </div>
+               </form>
+           </div>
         </main>
         <footer></footer>
     </body>

@@ -19,15 +19,16 @@
             </div>
         </header>
         <main>
-            <div class="login-box-container">
-              <div class="login-box">
-                  <h1>Login</h1>
-                  <form action="home.html">
+            <div class="register-box-container">
+              <div class="register-box">
+                  <h1>Register</h1>
+                  <form>
+                     <input type="text" type="email" placeholder="email">
                      <input type="text" placeholder="username">
-                     <input type="text" placeholder="password">
-                     <button type="submit" class="primary-button login-button">Login</button>
+                     <input type="password" placeholder="password">
+                     <button type="submit" class="primary-button login-button">Create account</button>
                    </form>
-                   <a href="register.html">Register Now</a>
+                   <a href="login.html">Log in to existing account</a>
                 </div>
             </div>
         </main>
