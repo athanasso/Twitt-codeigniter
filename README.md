@@ -1,5 +1,5 @@
 # CodeIgniter 4 Framework
-#A simple Twitter Clone written in Html, Css and PHP using MySql for database
+# A simple Twitter Clone written in Html, Css and PHP using MySql for database
 
 ## CodeIgniter 4 use for php framework
 
