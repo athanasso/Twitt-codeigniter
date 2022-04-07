@@ -22,10 +22,10 @@
             <div class="register-box-container">
               <div class="register-box">
                   <h1>Register</h1>
-                  <form>
-                     <input type="text" type="email" placeholder="email">
-                     <input type="text" placeholder="username">
-                     <input type="password" placeholder="password">
+                  <form method="post" action="<?php echo base_url();?>/account/registerpost">
+                     <input type="text" name="email" type="email" placeholder="email">
+                     <input type="text" name="username" placeholder="username">
+                     <input type="password" name="password" placeholder="password">
                      <button type="submit" class="primary-button login-button">Create account</button>
                    </form>
                    <a href="login.html">Log in to existing account</a>
