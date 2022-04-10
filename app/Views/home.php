@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-circle-user"></i>
                 </div>
                 <div class="name">
-                    <p><?= $user->username ?></p>
+                    <p><a class="no-link-style" href="<?= base_url() ?>/profile/viewprofile?id=<?= $user->id ?>"><?= $user->username ?></a></p>
                     <a href="<?= base_url() ?>/follow/addfollow?user=<?= $user->id ?>" class="primary-button">Follow</a>
                 </div>
                 </div>
