@@ -15,7 +15,7 @@ class Follow extends BaseController
         $userId = $session->get('user_id');
 
         if (!$userId) {
-            return redirect()->to('login');
+            return redirect()->to('/account/login');
         }
 
         $data = [
@@ -25,6 +25,6 @@ class Follow extends BaseController
 
         $followModel->save($data);
 
-        return redirect()->to('/home/');
+        return redirect()->to('/home/index');
     }
 }
