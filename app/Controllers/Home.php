@@ -18,7 +18,7 @@ class Home extends BaseController
 
         $twittModel = new \App\Models\Twitt();
 
-        $twitts = $twittModel->getAllWithUserInfo();
+        $twitts = $twittModel->getAllFollowingWithUserInfo();
 
         return view('template',['body' => 'home','recentUsers' => $users, 'recentTwitts' => $twitts]);
     }

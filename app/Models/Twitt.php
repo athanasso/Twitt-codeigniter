@@ -14,10 +14,24 @@ class Twitt extends Model
 
     public function getAllWithUserInfo() {
         $query= $this
-        ->select('t.body, t.created_at, user.username')
-        ->from('twitt as t')
-        ->join('user', 'user.id = t.user_id')
-        ->get();
-        return $query->getResult();
+            ->select('t.body, t.created_at, user.username')
+            ->from('twitt as t')
+            ->join('user', 'user.id = t.user_id')
+            ->get();
+            return $query->getResult();
+    }
+
+    public function getAllFollowingWithUserInfo() {
+        $userId = 1;
+        $query= $this
+            ->select('t.body, t.created_at, user.username, follow.personA, follow.personB')
+            ->from('twitt as t')
+            ->join('user', 'user.id = t.user_id')
+            ->join('follow', 'follow.personB = t.user_id')
+            ->where('follow.personA', $userId)
+            ->groupBy('t.id')
+            ->orderBy('t.created_at', 'asc')
+            ->get();
+            return $query->getResult();
     }
 }
