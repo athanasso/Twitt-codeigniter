@@ -13,6 +13,7 @@ class Account extends BaseController
     public function loginPost()
     {
         $session = \Config\Services::session();
+
         $userModel = new \App\Models\User();
 
         $users = $userModel->where('username',$this->request->getVar('username'))->where('password',$this->request->getVar('password'))
@@ -40,6 +41,12 @@ class Account extends BaseController
         ];
 
         $userModel->insert($data);
+        return redirect()->to('/account/login');
+    }
+
+    public function logout() {
+        $session = \Config\Services::session();
+        $session->set('user_id',false);
         return redirect()->to('/account/login');
     }
 }

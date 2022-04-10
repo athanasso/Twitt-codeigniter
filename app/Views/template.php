@@ -17,7 +17,7 @@
                     <a href="<?= base_url() ?>/profile/viewprofile">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    <a href="#" class="secondary-button">Logout</a>
+                    <a href="<?= base_url() ?>/account/logout" class="secondary-button">Logout</a>
                 </div>
             </header>
             <?= view($body);?>
