@@ -211,3 +211,13 @@ header .secondary-button, header .primary-button{
     padding: 20px;
     min-width: 500px;
 }
+
+/* error */
+
+.error p {
+    background: red;
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}

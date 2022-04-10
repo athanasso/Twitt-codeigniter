@@ -29,16 +29,21 @@ class Account extends BaseController
 
     public function register()
     {
-        return view('template', ['body' => 'register']);
+        return view('template', ['body' => 'register', 'hasError' => $this->request->getVar('error')]);
     }   
     public function registerPost()
     {
         $userModel = new \App\Models\User();
+
         $data = [
             'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
             'password' => $this->request->getVar('password')
         ];
+
+        if (!$data['username'] || !$data['email'] || !$data['password']) {
+            return redirect()->to('/account/register?error=true');
+        }
 
         $userModel->insert($data);
         return redirect()->to('/account/login');
