@@ -8,7 +8,7 @@ class Account extends BaseController
 {
     public function login()
     {
-        return view('login');
+        return view('template', ['body' => 'login']);
     }
     public function loginPost()
     {
@@ -28,7 +28,7 @@ class Account extends BaseController
 
     public function register()
     {
-        return view('register');
+        return view('template', ['body' => 'register']);
     }   
     public function registerPost()
     {
@@ -40,10 +40,6 @@ class Account extends BaseController
         ];
 
         $userModel->insert($data);
-        return view('login');
-    }
-    public function profile()
-    {
-        return view('profile');
+        return redirect()->to('login');
     }
 }

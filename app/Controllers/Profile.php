@@ -18,6 +18,6 @@ class Profile extends BaseController
 
         $twitts = $twittModel->where('user_id', $userId)->findAll();
 
-        return view('profile', ['user' => $user, 'twitts' => $twitts]);
+        return view('template', ['body' => 'profile', 'user' => $user, 'twitts' => $twitts]);
     }
 }

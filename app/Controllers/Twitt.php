@@ -6,7 +6,7 @@ class Twitt extends BaseController
 {
     public function post()
     {
-        return view('post');
+        return view('template', ['body' => 'post']);
     }
     public function submitPost(){
         $twittModel = new \App\Models\Twitt();

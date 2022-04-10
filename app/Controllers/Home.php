@@ -20,6 +20,6 @@ class Home extends BaseController
 
         $twitts = $twittModel->getAllWithUserInfo();
 
-        return view('home',['recentUsers' => $users, 'recentTwitts' => $twitts]);
+        return view('template',['body' => 'home','recentUsers' => $users, 'recentTwitts' => $twitts]);
     }
 }
