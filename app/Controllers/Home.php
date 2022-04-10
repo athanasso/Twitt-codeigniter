@@ -18,8 +18,8 @@ class Home extends BaseController
 
         $twittModel = new \App\Models\Twitt();
 
-        $twitts = $twittModel->findAll();
+        $twitts = $twittModel->getAllWithUserInfo();
 
-        return view('home', ['recentUsers' => $users, 'recentTwitts' => $twitts]);
+        return view('home',['recentUsers' => $users, 'recentTwitts' => $twitts]);
     }
 }

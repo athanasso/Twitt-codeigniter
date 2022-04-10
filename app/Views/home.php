@@ -29,15 +29,14 @@
                             <i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="message">
-                            <p><?= $twitt['body'] ?></p>
-                            <!-- <p class="metadata">Posted by Manos on 20/1/2022</p> -->
+                            <p><?= $twitt->body ?></p>
+                            <p class="metadata"><?= 'Created by ', $twitt->username, ' at ' , $twitt->created_at ?></p>
                         </div>
                     </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="recent-users-feed">
                     <h2>Recent users</h2>
-
                     <?php foreach ($recentUsers as $user): ?>
                         <div class="new-user">
                         <div class="profile-pic">
