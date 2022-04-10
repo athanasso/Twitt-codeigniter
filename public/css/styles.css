@@ -212,12 +212,36 @@ header .secondary-button, header .primary-button{
     min-width: 500px;
 }
 
-/* error */
+header .menu-toggle {
+    display: none;
+}
 
+/* error */
 .error p {
     background: red;
     display: block;
     color: white;
     padding: 10px;
     text-align: left;
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+    .login-box {
+        max-width: 300px;
+    }
+    header .menu-toggle {
+        display: inline-block;
+    }
+    header .menu {
+        display: none;
+    }
+    header .menu.open {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 69px;
+        background-color: black;
+    }
 }
