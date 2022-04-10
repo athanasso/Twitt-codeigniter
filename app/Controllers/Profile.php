@@ -8,7 +8,13 @@ class Profile extends BaseController
 {
     public function viewProfile()
     {
+        $session = \Config\Services::session();
+
         $userId = $this->request->getVar('id');
+
+        if (!$userId) {
+            $userId = $session->get('user_id');
+        }
 
         $userModel = new \App\Models\User();
 
