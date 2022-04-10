@@ -24,12 +24,14 @@ input[type=text], input[type=password], input[type=email] {
     border: none;
     padding: 10px 20px;
     text-decoration: none;
+    display: block;
 }
 .secondary-button {
     background-color: #8f001a;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
+    display: block;
 }
 .form-actions {
     display: flex;
@@ -63,6 +65,9 @@ header .logo {
     color: white;
     margin-right: 20px;
     font-size: 20px;
+}
+header .secondary-button{
+    display: inline-block;
 }
 /*Login and register page*/
 .login-box-container {
@@ -157,13 +162,14 @@ header .logo {
 .new-user {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 .new-user .profile-pic {
     font-size: 30px;
     margin-right: 20px;
 }
 .new-user p {
-    margin: 0,0,20,0;
+    margin: 0,0,10px,0;
 }
 
 /* Post page*/

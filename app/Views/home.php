@@ -23,36 +23,32 @@
             <div class="timeline-container">
                 <div class="twitts-feed">
                     <h1>Twitts</h1>
+                    <?php foreach ($recentTwitts as $twitt): ?>
                     <div class="twitt">
                         <div class="profile-pic">
                             <i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="message">
-                            <p>Hello, this is my first Twitt</p>
-                            <p class="metadata">Posted by Manos on 20/1/2022</p>
+                            <p><?= $twitt['body'] ?></p>
+                            <!-- <p class="metadata">Posted by Manos on 20/1/2022</p> -->
                         </div>
                     </div>
-                    <div class="twitt">
-                        <div class="profile-pic">
-                            <i class="fa-solid fa-circle-user"></i>
-                        </div>
-                        <div class="message">
-                            <p>Hello, this is my Second Twitt</p>
-                            <p class="metadata">Posted by Manos on 20/1/2022</p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="recent-users-feed">
                     <h2>Recent users</h2>
-                    <div class="new-user">
+
+                    <?php foreach ($recentUsers as $user): ?>
+                        <div class="new-user">
                         <div class="profile-pic">
                             <i class="fa-solid fa-circle-user"></i>
                         </div>
                         <div class="name">
-                            <p>Manos</p>
+                            <p><?= $user['username'] ?></p>
                             <a href="#" class="primary-button">Follow</a>
                         </div>
-                    </div>
+                        </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </main>

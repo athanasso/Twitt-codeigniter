@@ -12,6 +12,14 @@ class Home extends BaseController
             return redirect()->to('/account/login');
         }
 
-        return view('home');
+        $userModel = new \App\Models\User();
+
+        $users = $userModel->findAll();
+
+        $twittModel = new \App\Models\Twitt();
+
+        $twitts = $twittModel->findAll();
+
+        return view('home', ['recentUsers' => $users, 'recentTwitts' => $twitts]);
     }
 }
