@@ -13,8 +13,8 @@
                     <p><?= $twitt->body ?></p>
                     <p class="metadata">Posted on <?= $twitt->created_at ?></p>
                 </div>
-                <?php endforeach; ?>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </main>

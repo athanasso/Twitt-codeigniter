@@ -11,8 +11,8 @@
                     <p><?= $twitt->body ?></p>
                     <p class="metadata"><?= 'Created by ', $twitt->username, ' at ' , $twitt->created_at ?></p>
                 </div>
-            </div>
-               <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
         </div>
         <div class="recent-users-feed">
             <h2>Recent users</h2>

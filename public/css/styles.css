@@ -244,4 +244,19 @@ header .menu-toggle {
         top: 69px;
         background-color: black;
     }
+    .timeline-container {
+        flex-direction: column;
+    }
+    .twitts-feed {
+        border-right: none;
+    }
+    .recent-users-feed {
+        padding-left: 0;
+    }
+    .profile-main .twitts-feed {
+        min-width: 0;
+    }
+    .post-container {
+        max-width: 300px;
+    }
 }
