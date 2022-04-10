@@ -11,4 +11,14 @@ class User extends Model
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
     protected $allowedFields = ['id','email','password','username'];
+
+    public function getAllDesc() {
+        $query= $this
+            ->select('*')
+            ->from('user as u')
+            ->orderBy('u.id', 'desc')
+            ->groupBy('u.id')
+            ->get();
+        return $query->getResult();
+    }
 }

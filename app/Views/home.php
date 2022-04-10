@@ -22,8 +22,8 @@
                     <i class="fa-solid fa-circle-user"></i>
                 </div>
                 <div class="name">
-                    <p><?= $user['username'] ?></p>
-                    <a href="<?= base_url() ?>/follow/addfollow?user=<?= $user['id'] ?>" class="primary-button">Follow</a>
+                    <p><?= $user->username ?></p>
+                    <a href="<?= base_url() ?>/follow/addfollow?user=<?= $user->id ?>" class="primary-button">Follow</a>
                 </div>
                 </div>
             <?php endforeach;?>

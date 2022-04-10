@@ -14,7 +14,7 @@ class Home extends BaseController
 
         $userModel = new \App\Models\User();
 
-        $users = $userModel->findAll();
+        $users = $userModel->getAllDesc();
 
         $twittModel = new \App\Models\Twitt();
 
