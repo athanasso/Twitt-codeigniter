@@ -44,13 +44,12 @@
                         </div>
                         <div class="name">
                             <p><?= $user['username'] ?></p>
-                            <a href="#" class="primary-button">Follow</a>
+                            <a href="<?= base_url() ?>/follow/addfollow?user=<?= $user['id'] ?>" class="primary-button">Follow</a>
                         </div>
                         </div>
                     <?php endforeach;?>
                 </div>
             </div>
         </main>
-        <footer></footer>
     </body>
 </html>
