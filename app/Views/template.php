@@ -10,10 +10,11 @@
             <header>
                 <div class="logo">Twitt</div>
                 <div class="header-actions">
-                    <a href="home.html">
+                    <a href="<?= base_url() ?>/twitt/post" class="primary-button">Post</a>
+                    <a href="<?= base_url() ?>/home">
                         <i class="fa-solid fa-house-chimney-window"></i>   
                     </a>
-                    <a href="#">
+                    <a href="<?= base_url() ?>/profile/viewprofile">
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <a href="#" class="secondary-button">Logout</a>

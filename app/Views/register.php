@@ -8,7 +8,7 @@
                 <input type="password" name="password" placeholder="password">
                 <button type="submit" class="primary-button login-button">Create account</button>
             </form>
-           <a href="login.html">Log in to existing account</a>
+           <a href="<?= base_url() ?>/account/login">Log in to existing account</a>
         </div>
     </div>
 </main>

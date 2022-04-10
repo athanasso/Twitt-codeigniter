@@ -7,7 +7,7 @@
                 <input type="password" name="password" placeholder="password">
                 <button type="submit" class="primary-button login-button">Login</button>
             </form>
-            <a href="register.html">Register Now</a>
+            <a href="<?= base_url() ?>/account/register">Register Now</a>
         </div>
     </div>
 </main>
