@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         $session = \Config\Services::session();
 
-        if(!$session->get('isSignedIn')){
+        if(!$session->get('user_id')){
             return redirect()->to('/account/login');
         }
 

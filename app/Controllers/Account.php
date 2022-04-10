@@ -17,8 +17,9 @@ class Account extends BaseController
 
         $users = $userModel->where('username',$this->request->getVar('username'))->where('password',$this->request->getVar('password'))
                     ->findAll();
+
         if (count($users) > 0) {
-            $session->set(['isSignedIn'=>true]);
+            $session->set(['user_id'=>$users[0]['id']]);
             return redirect()->to('/home/index');
         } else{
             return redirect()->to('/account/login');

@@ -8,4 +8,16 @@ class Twitt extends BaseController
     {
         return view('post');
     }
+    public function submitPost(){
+        $twittModel = new \App\Models\Twitt();
+
+        $session = \Config\Services::session();
+
+        $data = [
+            'body' => $this->request->getVar('body'),
+            'user_id' => $session->get('user_id'),
+        ];
+        $twittModel->save($data);
+        return redirect()->to('/home/index');
+    }
 }
