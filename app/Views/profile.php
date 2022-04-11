@@ -1,6 +1,7 @@
 <main class="profile-main">
      <div class="profile-view">
-        <i class="fa-solid fa-circle-user user-profile-pic"></i>
+        <!-- <i class="fa-solid fa-circle-user user-profile-pic"></i> -->
+        <img src="<?= base_url() ?>/<?= $user['profile_pic'] ?>" class="user-profile-pic">
         <h1><?= $user['username'] ?></h1>
         <a href="<? base_url() ?>/follow/addFollow?user=<? $user['id'] ?>" class="primary-button">Follow</a>
         <div class="twitts-feed">

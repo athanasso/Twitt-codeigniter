@@ -19,7 +19,11 @@
             <?php foreach ($recentUsers as $user): ?>
                 <div class="new-user">
                 <div class="profile-pic">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <?php if ($user->profile_pic): ?>
+                        <img src="<?= base_url() ?>/<?= $user->profile_pic ?>">
+                    <?php else: ?>
+                        <i class="fa-solid fa-circle-user"></i>
+                    <?php endif; ?>
                 </div>
                 <div class="name">
                     <p><a class="no-link-style" href="<?= base_url() ?>/profile/viewprofile?id=<?= $user->id ?>"><?= $user->username ?></a></p>

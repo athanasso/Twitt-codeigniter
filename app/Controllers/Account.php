@@ -35,10 +35,15 @@ class Account extends BaseController
     {
         $userModel = new \App\Models\User();
 
+        $file = $this->request->getFile('profilepic');
+        $newName = $file->getRandomName();
+        $file->move('uploads', $newName);
+
         $data = [
             'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
-            'password' => $this->request->getVar('password')
+            'password' => $this->request->getVar('password'),
+            'profile_pic' => 'uploads/'. $newName
         ];
 
         if (!$data['username'] || !$data['email'] || !$data['password']) {

@@ -10,7 +10,7 @@ class User extends Model
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
-    protected $allowedFields = ['id','email','password','username'];
+    protected $allowedFields = ['id','email','password','username', 'profile_pic'];
 
     public function getAllDesc() {
         $query= $this

@@ -168,6 +168,9 @@ header .secondary-button, header .primary-button{
     font-size: 30px;
     margin-right: 20px;
 }
+.new-user .profile-pic img {
+    max-width: 60px;
+}
 .new-user p {
     margin: 0,0,10px,0;
 }
@@ -204,6 +207,7 @@ header .secondary-button, header .primary-button{
     font-size: 200px;
     color: white;
     margin: 30px 0;
+    max-width: 300px;
 }
 .profile-main .twitts-feed{
     background-color: white;
