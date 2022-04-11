@@ -149,6 +149,9 @@ header .secondary-button, header .primary-button{
     font-size: 50px;
     margin-right: 20px;
 }
+.twitt .profile-pic img {
+    max-width: 60px;
+}
 .twitt p {
     margin-top: 0;
     font-size: 18px;

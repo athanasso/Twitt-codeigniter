@@ -5,7 +5,11 @@
             <?php foreach ($recentTwitts as $twitt): ?>
                <div class="twitt">
                 <div class="profile-pic">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <?php if ($twitt->profile_pic): ?>
+                        <img src="<?= base_url() ?>/<?= $twitt->profile_pic ?>">
+                    <?php else: ?>
+                        <i class="fa-solid fa-circle-user"></i>
+                    <?php endif; ?>
                 </div>
                 <div class="message">
                     <p><?= $twitt->body ?></p>

@@ -8,7 +8,9 @@ class Home extends BaseController
     {
         $session = \Config\Services::session();
 
-        if(!$session->get('user_id')){
+        $userId = $session->get('user_id');
+
+        if(!$userId){
             return redirect()->to('/account/login');
         }
 
@@ -18,7 +20,7 @@ class Home extends BaseController
 
         $twittModel = new \App\Models\Twitt();
 
-        $twitts = $twittModel->getAllFollowingWithUserInfo();
+        $twitts = $twittModel->getAllFollowingWithUserInfo($userId);
 
         return view('template',['body' => 'home','recentUsers' => $users, 'recentTwitts' => $twitts]);
     }

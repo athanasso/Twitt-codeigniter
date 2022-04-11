@@ -12,10 +12,9 @@ class Twitt extends Model
     protected $returnType     = 'object';
     protected $allowedFields = ['id','body','user_id'];
 
-    public function getAllFollowingWithUserInfo() {
-        $userId = 1;
+    public function getAllFollowingWithUserInfo($userId) {
         $query= $this
-            ->select('t.body, t.created_at, user.username, follow.personA, follow.personB')
+            ->select('t.body, t.created_at, user.username, user.profile_pic, follow.personA, follow.personB')
             ->from('twitt as t')
             ->join('user', 'user.id = t.user_id')
             ->join('follow', 'follow.personB = t.user_id')
